@@ -70,7 +70,7 @@
    "provides" : {
       "File::ShareDir::Override" : {
          "file" : "lib/File/ShareDir/Override.pm",
-         "version" : "0.100"
+         "version" : "0.200"
       }
    },
    "release_status" : "stable",
@@ -85,6 +85,6 @@
          "web" : "https://github.com/odyniec/p5-File-ShareDir-Override"
       }
    },
-   "version" : "0.100"
+   "version" : "0.200"
 }
 

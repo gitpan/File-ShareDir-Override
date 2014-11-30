@@ -34,7 +34,7 @@ no_index:
 provides:
   File::ShareDir::Override:
     file: lib/File/ShareDir/Override.pm
-    version: 0.100
+    version: 0.200
 requires:
   File::ShareDir: 0
   perl: 5.006
@@ -44,4 +44,4 @@ resources:
   bugtracker: https://github.com/odyniec/p5-File-ShareDir-Override/issues
   homepage: https://github.com/odyniec/p5-File-ShareDir-Override
   repository: https://github.com/odyniec/p5-File-ShareDir-Override.git
-version: 0.100
+version: 0.200

@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: Override directories returned by File::ShareDir
 
-our $VERSION = '0.100'; # VERSION
+our $VERSION = '0.200'; # VERSION
 
 use File::ShareDir;
 
@@ -39,7 +39,7 @@ sub import {
                 # Assume dist_dir ("Foo-Bar:/some/path" or "Foo:/some/path")
                 $dist_dirs{$opt[0]} = $opt[1];
             }
-        } split ',', $dir;
+        } split ';', $dir;
     }
     else {
         # TODO: Guess the distribution and the share directory?
@@ -106,7 +106,7 @@ File::ShareDir::Override - Override directories returned by File::ShareDir
 
 =head1 VERSION
 
-version 0.100
+version 0.200
 
 =head1 SYNOPSIS
 
@@ -128,6 +128,10 @@ double colons in the name and can't be recognized, so they need an explicit
 C<:dist> or C<:module> between the name and path. Example:
 
     perl -MFile::ShareDir::Override=Foo:module:./lib program.pl
+
+Usage with C<prove>:
+
+    PERL5OPT=-MFoo-Bar:./share prove sometests.t
 
 =for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders metacpan
 
